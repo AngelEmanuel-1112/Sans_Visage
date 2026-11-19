@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sans Visage · PrivaQR</title>
+<meta name="description" content="Sans Visage, de PrivaQR: playera y pantalón con código QR para que las cámaras con IA miren el código y no tu rostro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#inicio">PrivaQR</a>
+  <nav>
+    <a href="#como-funciona">Cómo funciona</a>
+    <a href="#prenda">La prenda</a>
+    <a href="#equipo">Equipo</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <h1>Sans Visage</h1>
+    <p class="lead">Ropa pensada para que la cámara mire el código y no tu cara.</p>
+    <p>Las cámaras de seguridad con IA pueden grabar y reconocer rostros. Esta playera lleva un código QR que atrae el enfoque de la cámara y protege la privacidad de quien la usa.</p>
+    <a class="btn" href="#prenda">Ver la prenda</a>
+  </div>
+
+  <div class="demo">
+    <div class="stage" id="stage" aria-label="Demostración de una cámara que detecta un rostro o un código QR">
+      <svg viewBox="0 0 320 400" role="img" aria-label="Silueta con playera y código QR">
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-opacity=".12"/>
+          </pattern>
+        </defs>
+        <rect width="320" height="400" fill="url(#grid)"/>
+        <path d="M70 400 L80 250 Q85 205 130 195 L190 195 Q235 205 240 250 L250 400Z" class="shirt"/>
+        <path d="M70 262 L30 330 L56 346 L92 290Z M250 262 L290 330 L264 346 L228 290Z" class="shirt"/>
+        <rect x="143" y="140" width="34" height="62" rx="12" class="skin"/>
+        <g id="head"><circle cx="160" cy="92" r="46" class="skin"/><circle cx="145" cy="86" r="4" class="ink"/><circle cx="175" cy="86" r="4" class="ink"/><path d="M146 110 Q160 120 174 110" fill="none" class="stroke"/></g>
+        <g id="qr"></g>
+        <path d="M100 330 l18 -12 l16 14 l-14 14z M200 318 l22 8 l-6 20 l-20 -6z" class="kraft"/>
+      </svg>
+      <div class="box" id="box"><span id="boxLabel">Rostro detectado</span></div>
+    </div>
+    <div class="toggle" role="group" aria-label="Modo de la demostración">
+      <button type="button" data-mode="sin" aria-pressed="true">Sin código</button>
+      <button type="button" data-mode="con" aria-pressed="false">Con código QR</button>
+    </div>
+    <p class="note">Ilustración conceptual de un proyecto escolar; no es una prueba contra cámaras reales.</p>
+  </div>
+</section>
+
+<section class="how" id="como-funciona">
+  <h2>Cómo funciona</h2>
+  <ol>
+    <li><h3>La cámara busca un objetivo</h3><p>Los sistemas con IA escanean la escena y se enfocan en lo que reconocen.</p></li>
+    <li><h3>El QR llama su atención</h3><p>El código grande en la playera es un objetivo claro y fácil de detectar.</p></li>
+    <li><h3>El rostro queda en segundo plano</h3><p>Con la cámara enfocada en el código, se busca proteger la identidad de quien la lleva.</p></li>
+  </ol>
+</section>
+
+<section class="garment" id="prenda">
+  <h2>La prenda</h2>
+  <div class="pieces">
+    <article>
+      <h3>Playera</h3>
+      <p>Algodón con un código QR de plástico en el pecho e imágenes recortadas con relieve hecho de cartón.</p>
+    </article>
+    <article>
+      <h3>Pantalón</h3>
+      <p>Mezclilla. En la pierna derecha, cadenas de plástico con botones cruzan el muslo y terminan en botones color bronce. En la otra pierna van más imágenes recortadas.</p>
+    </article>
+  </div>
+  <ul class="materials" aria-label="Materiales">
+    <li><span class="dot cotton"></span>Algodón</li>
+    <li><span class="dot denim"></span>Mezclilla</li>
+    <li><span class="dot plastic"></span>Plástico y silicón</li>
+    <li><span class="dot card"></span>Cartón</li>
+  </ul>
+</section>
+
+<section class="team" id="equipo">
+  <h2>Equipo</h2>
+  <dl>
+    <div><dt>Diseñadores</dt><dd>Ángel Tamayo Tamayo<br>Ángel Emanuel Gutiérrez Méndez</dd></div>
+    <div><dt>Modelo</dt><dd>Héctor Manuel Pérez Cruz</dd></div>
+  </dl>
+</section>
+</main>
+
+<footer>
+  <p>Sans Visage significa «sin rostro» en francés. © PrivaQR</p>
+</footer>
+<script src="Script.js"></script>
+</body>
+</html>

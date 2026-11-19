@@ -1,0 +1,58 @@
+:root{
+  --paper:#E9ECEF; --ink:#141922; --denim:#1F2E4A; --bronze:#B07A3B; --kraft:#CDAA7D; --shirt:#F7F5F0;
+  --display:'Syne',system-ui,sans-serif; --body:'Instrument Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bronze);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);line-height:1.05}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:1rem clamp(1rem,5vw,4rem);position:sticky;top:0;background:var(--paper);z-index:5;border-bottom:1px solid #c9ced6}
+.brand{font:800 1.25rem var(--display);text-decoration:none;color:var(--denim)}
+.nav nav{display:flex;gap:1.5rem}
+.nav nav a{text-decoration:none;font-weight:500}
+.nav nav a:hover{color:var(--bronze)}
+section{padding:clamp(3rem,8vw,6rem) clamp(1rem,5vw,4rem);max-width:1180px;margin:auto}
+h2{font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:2rem;color:var(--denim)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(3.5rem,11vw,8rem);font-weight:800;color:var(--denim);letter-spacing:-.03em;margin-bottom:1rem}
+.lead{font:600 1.5rem/1.3 var(--display);margin-bottom:1rem}
+.hero-text p{max-width:52ch;margin-bottom:1.5rem}
+.btn{display:inline-block;background:var(--bronze);color:#fff;padding:.8rem 1.6rem;border-radius:4px;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--denim)}
+.demo{max-width:380px;width:100%;justify-self:center}
+.stage{position:relative;aspect-ratio:4/5;background:#fff;border:2px solid var(--denim);color:var(--denim);overflow:hidden}
+.stage svg{width:100%;height:100%;display:block}
+.shirt{fill:var(--shirt);stroke:var(--denim);stroke-width:2}
+.skin{fill:#E1C3A6}.ink{fill:var(--ink)}.stroke{stroke:var(--ink);stroke-width:3;stroke-linecap:round}
+.kraft{fill:var(--kraft);stroke:var(--ink);stroke-width:1.5}
+#head{transition:filter .6s}
+.stage.con #head{filter:blur(7px)}
+.box{position:absolute;border:3px solid var(--bronze);left:33%;top:9%;width:34%;height:27.5%;transition:all .7s cubic-bezier(.6,0,.2,1)}
+.box span{position:absolute;left:-3px;bottom:100%;background:var(--bronze);color:#fff;font:600 .72rem/1 var(--body);padding:.35rem .5rem;white-space:nowrap}
+.stage.con .box{left:35.5%;top:43.5%;width:29%;height:23%}
+.toggle{display:flex;margin-top:1rem;border:2px solid var(--denim)}
+.toggle button{flex:1;padding:.7rem;font:600 1rem var(--body);background:transparent;color:var(--denim);border:0;cursor:pointer}
+.toggle button[aria-pressed=true]{background:var(--denim);color:#fff}
+.note{font-size:.85rem;margin-top:.75rem;color:#4a5262}
+.how ol{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.how li{border-top:4px solid var(--bronze);padding-top:1rem}
+.how h3{font-size:1.3rem;margin-bottom:.5rem}
+.garment{background:var(--denim);color:#fff;max-width:none}
+.garment>*{max-width:1180px;margin-left:auto;margin-right:auto}
+.garment h2{color:#fff}
+.pieces{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.pieces article{border-left:4px solid var(--kraft);padding-left:1.25rem}
+.pieces h3{font-size:1.6rem;margin-bottom:.5rem}
+.materials{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2.5rem}
+.dot{display:inline-block;width:.9rem;height:.9rem;border-radius:50%;margin-right:.5rem;vertical-align:-1px}
+.cotton{background:var(--shirt)}.denim{background:#5C7AA8}.plastic{background:var(--bronze)}.card{background:var(--kraft)}
+.team dl{display:flex;flex-wrap:wrap;gap:3rem}
+.team dt{font:800 1.2rem var(--display);color:var(--bronze);margin-bottom:.4rem}
+footer{padding:2rem;text-align:center;border-top:1px solid #c9ced6;font-size:.9rem}
+@media(max-width:800px){
+  .hero,.how ol,.pieces{grid-template-columns:1fr}
+  .nav nav{gap:1rem;font-size:.9rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
